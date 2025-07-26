@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Checkout</title>
+<link rel="stylesheet" href="../styles/stylepayment.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="Homepage.html">
+                <img src="../assets/images/img_logo_vector.svg" alt="Cyber Logo" class="logo" />
+            </a>
+            
+            <div class="search-container">
+                <img src="../assets/images/img_search.svg" alt="Search" class="search-icon" />
+                <input type="text" class="search-input" placeholder="Search" />
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="Homepage.html" class="nav-item active">Home</a>
+                <a href="Aboutus.html" class="nav-item">About</a>
+                <a href="Contactus.html" class="nav-item">Contact Us</a>
+                <a href="Blog.html" class="nav-item">Blog</a>
+            </nav>
+            
+            <div class="header-icons">
+                <img src="../assets/images/img_icon_32px_favorites.svg" alt="Favorites" class="header-icon" />
+                <a href="Cart.html">
+                    <img src="../assets/images/img_cart1.svg" alt="Cart" class="header-icon" />
+                </a>
+                <a href="auth_page.html">
+                <img src="../assets/images/img_icon_32px_user.svg" alt="User" class="header-icon" />
+                </a>
+            </div>
+        </div>
+    </header>
+        
+        <!-- Progress Steps -->
+        <section class="progress-section">
+            <div class="progress-container">
+                <div class="progress-step">
+                    <div class="step-icon inactive">
+                        <img src="../assets/images/img_icon_24px_location.svg" alt="Location" />
+                    </div>
+                    <div class="step-text">
+                        <span class="step-number step-inactive">Step 1</span>
+                        <span class="step-title step-inactive">Address</span>
+                    </div>
+                </div>
+                
+                <div class="progress-step">
+                    <div class="step-icon inactive">
+                        <img src="../assets/images/img_icon_24px_shipping.svg" alt="Shipping" />
+                    </div>
+                    <div class="step-text">
+                        <span class="step-number step-inactive">Step 2</span>
+                        <span class="step-title step-inactive">Shipping</span>
+                    </div>
+                </div>
+                
+                <div class="progress-step">
+                    <div class="step-icon active">
+                        <img src="../assets/images/img_icon_24px_payment.svg" alt="Payment" />
+                    </div>
+                    <div class="step-text">
+                        <span class="step-number step-active">Step 3</span>
+                        <span class="step-title step-active">Payment</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Summary Section -->
+            <div class="summary-section">
+                <h2 class="summary-title">Summary</h2>
+                
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="../assets/images/img_image_phone_mini.png" alt="iPhone" class="product-image" />
+                        <div class="product-details">
+                            <span class="product-name">Apple iPhone 14 Pro Max 128Gb</span>
+                            <span class="product-price">$1399</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="address-section">
+                    <h3 class="address-title">Address</h3>
+                    <p class="address-text">123 AbC, XYZ city</p>
+                </div>
+                
+                <div class="shipping-section">
+                    <h3 class="shipping-title">Shipment method</h3>
+                    <p class="shipping-method">Free</p>
+                </div>
+                
+                <div class="totals-section">
+                    <div class="total-row">
+                        <span class="total-label subtotal-label">Subtotal</span>
+                        <span class="total-value subtotal-value">$1399</span>
+                    </div>
+                    
+                    <div class="total-row">
+                        <span class="total-label tax-label">Estimated Tax</span>
+                        <span class="total-value tax-value">$50</span>
+                    </div>
+                    
+                    <div class="total-row">
+                        <span class="total-label shipping-label">Estimated shipping & Handling</span>
+                        <span class="total-value shipping-value">$29</span>
+                    </div>
+                    
+                    <div class="total-row">
+                        <span class="total-label final-total-label">Total</span>
+                        <span class="total-value final-total-value">$1478</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Payment Section -->
+            <div class="payment-section">
+                <div class="payment-header">
+                    <h2 class="payment-title">Payment</h2>
+                    <div class="payment-tabs">
+                        <span class="payment-tab active">Credit Card</span>
+                        <span class="payment-tab">PayPal</span>
+                        <span class="payment-tab">PayPal Credit</span>
+                    </div>
+                </div>
+                
+                <div class="payment-content">
+                    <img src="../assets/images/img_image_65.png" alt="Credit Card" class="card-image" />
+                    
+                    <div class="payment-form">
+                        <input type="text" class="form-input" placeholder="Cardholder Name" />
+                        <input type="text" class="form-input" placeholder="Card Number" />
+                        <div class="form-row">
+                            <input type="text" class="form-input" placeholder="Exp.Date" />
+                            <input type="text" class="form-input" placeholder="CVV" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" class="checkbox" id="billing-address" />
+                    <label for="billing-address" class="checkbox-label">Same as billing address</label>
+                </div>
+                
+                <div class="button-row">
+                        <a href="Shipping.html" class="btn btn-secondary">Back</a>
+                        <a href="Payment.html" class="btn btn-primary">Next</a>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="../assets/images/img_footer_logo.svg" alt="Cyber" class="footer-logo" />
+                        <div class="social-links">
+                            <img src="../assets/images/img_twitter.svg" alt="Twitter" class="social-icon" />
+                            <img src="../assets/images/img_icon_16px_facebook.svg" alt="Facebook" class="social-icon" />
+                            <img src="../assets/images/img_icon_16px_tiktok.svg" alt="TikTok" class="social-icon" />
+                            <img src="../assets/images/img_icon_16px_instagram.svg" alt="Instagram" class="social-icon" />
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h3 class="footer-section-title">Services</h3>
+                            <div class="footer-link-list">
+                                <a href="#" class="footer-link">Bonus program</a>
+                                <a href="#" class="footer-link">Gift cards</a>
+                                <a href="#" class="footer-link">Credit and payment</a>
+                                <a href="#" class="footer-link">Service contracts</a>
+                                <a href="#" class="footer-link">Non-cash account</a>
+                                <a href="#" class="footer-link">Payment</a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h3 class="footer-section-title">Assistance to the buyer</h3>
+                            <div class="footer-link-list">
+                                <a href="#" class="footer-link">Find an order</a>
+                                <a href="#" class="footer-link">Terms of delivery</a>
+                                <a href="#" class="footer-link">Exchange and return of goods</a>
+                                <a href="#" class="footer-link">Guarantee</a>
+                                <a href="#" class="footer-link">Frequently asked questions</a>
+                                <a href="#" class="footer-link">Terms of use of the site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.payment-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.payment-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Form validation and interaction
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.style.borderColor = '#000000';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.style.borderColor = '#cecece';
+            });
+        });
+        
+        // Button interactions
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent === 'Pay') {
+                    alert('Payment processing...');
+                } else if (this.textContent === 'Back') {
+                    window.history.back();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
