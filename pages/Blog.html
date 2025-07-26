@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog</title>
+  <link rel="stylesheet" href="../styles/styleindex.css"/>
+  <style>
+    .blog-container {
+      max-width: 1080px;
+      margin: 80px auto;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .blog-title {
+      font-size: 36px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .blog-post {
+      margin-bottom: 56px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 32px;
+    }
+
+    .blog-post:last-child {
+      border-bottom: none;
+    }
+
+    .blog-post h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .blog-meta {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    .blog-post p {
+      font-size: 15px;
+      line-height: 26px;
+      color: #444;
+      text-align: justify;
+    }
+
+    .blog-post a.read-more {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 14px;
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .blog-post img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="Homepage.html">
+        <img src="../assets/images/img_logo_vector.svg" alt="Cyber Logo" class="logo" />
+      </a>
+      <div class="search-container">
+        <img src="../assets/images/img_search.svg" alt="Search" class="search-icon" />
+        <input type="text" class="search-input" placeholder="Search" />
+      </div>
+      <nav class="nav-menu">
+        <a href="Homepage.html" class="nav-item">Home</a>
+        <a href="About.html" class="nav-item">About</a>
+        <a href="ContactUs.html" class="nav-item">Contact Us</a>
+        <a href="Blog.html" class="nav-item active">Blog</a>
+      </nav>
+      <div class="header-icons">
+        <img src="../assets/images/img_icon_32px_favorites.svg" alt="Favorites" class="header-icon" />
+        <a href="Cart.html"><img src="../assets/images/img_cart1.svg" alt="Cart" class="header-icon" /></a>
+        <a href="auth_page.html"><img src="../assets/images/img_icon_32px_user.svg" alt="User" class="header-icon" /></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog Content -->
+  <main>
+    <div class="blog-container">
+      <h1 class="blog-title">Our Latest Blog Posts</h1>
+
+      <div class="blog-post">
+        <img src="../assets/images/blog_gadget.jpg" alt="Top Gadgets 2025">
+        <h3>5 Must-Have Gadgets in 2025</h3>
+        <div class="blog-meta">By Admin | July 24, 2025</div>
+        <p>
+          Technology evolves fast – and 2025 is no exception. This year, we’re seeing the rise of AI-powered glasses, foldable laptops, and eco-friendly smart devices. Whether you’re a student, professional, or tech lover, here are 5 gadgets you can’t miss out on this year.
+        </p>
+        <a href="#" class="read-more">Read more →</a>
+      </div>
+
+      <div class="blog-post">
+        <img src="../assets/images/blog_smart_home.jpg" alt="Smart Home">
+        <h3>How to Set Up a Smart Home in Under 30 Minutes</h3>
+        <div class="blog-meta">By John D. | July 22, 2025</div>
+        <p>
+          Smart homes aren’t just for tech geniuses anymore. With just a few affordable gadgets and your smartphone, you can automate lights, security, air conditioning, and more. Follow this quick guide to turn your home into a smart haven – without the headache.
+        </p>
+        <a href="#" class="read-more">Read more →</a>
+      </div>
+
+      <div class="blog-post">
+        <img src="../assets/images/blog_gaming.jpg" alt="Gaming Setup">
+        <h3>The Ultimate Gaming Setup Guide (Budget to Pro)</h3>
+        <div class="blog-meta">By Sophia | July 19, 2025</div>
+        <p>
+          Ready to level up your gaming space? Whether you're on a tight budget or going all-in on a high-end rig, this guide will help you build your dream gaming setup. Includes desk tips, RGB lighting hacks, and accessory recommendations.
+        </p>
+        <a href="#" class="read-more">Read more →</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <img src="../assets/images/img_logo_vector_white_a700.svg" alt="Cyber Logo" class="footer-logo" />
+        </div>
+        <div class="footer-social">
+          <img src="../assets/images/img_twitter.svg" alt="Twitter" class="social-icon" />
+          <img src="../assets/images/img_icon_16px_facebook.svg" alt="Facebook" class="social-icon" />
+          <img src="../assets/images/img_icon_16px_tiktok.svg" alt="TikTok" class="social-icon" />
+          <img src="../assets/images/img_icon_16px_instagram.svg" alt="Instagram" class="social-icon" />
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-column">
+          <h3 class="footer-column-title">Services</h3>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Bonus program</a>
+            <a href="#" class="footer-link">Gift cards</a>
+            <a href="#" class="footer-link">Credit and payment</a>
+            <a href="#" class="footer-link">Service contracts</a>
+            <a href="#" class="footer-link">Non-cash account</a>
+            <a href="#" class="footer-link">Payment</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-column-title">Assistance to the buyer</h3>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Find an order</a>
+            <a href="#" class="footer-link">Terms of delivery</a>
+            <a href="#" class="footer-link">Exchange and return of goods</a>
+            <a href="#" class="footer-link">Guarantee</a>
+            <a href="#" class="footer-link">Frequently asked questions</a>
+            <a href="#" class="footer-link">Terms of use of the site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
