@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber - Shipping Method</title>
+    <link rel="stylesheet" href="../styles/styleshipping.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="Homepage.html">
+                <img src="../assets/images/img_logo_vector.svg" alt="Cyber Logo" class="logo" />
+            </a>
+            
+            <div class="search-container">
+                <img src="../assets/images/img_search.svg" alt="Search" class="search-icon" />
+                <input type="text" class="search-input" placeholder="Search" />
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="Homepage.html" class="nav-item active">Home</a>
+                <a href="Aboutus.html" class="nav-item">About</a>
+                <a href="Contactus.html" class="nav-item">Contact Us</a>
+                <a href="Blog.html" class="nav-item">Blog</a>
+            </nav>
+            
+            <div class="header-icons">
+                <img src="../assets/images/img_icon_32px_favorites.svg" alt="Favorites" class="header-icon" />
+                <a href="Cart.html">
+                    <img src="../assets/images/img_cart1.svg" alt="Cart" class="header-icon" />
+                </a>
+                <a href="auth_page.html">
+                <img src="../assets/images/img_icon_32px_user.svg" alt="User" class="header-icon" />
+                </a>
+            </div>
+        </div>
+    </header>
+        
+        <div class="content-wrapper">
+            <section class="progress-section">
+                <div class="progress-container">
+                    <div class="progress-step">
+                        <div class="step-icon inactive">
+                            <img src="../assets/images/img_icon_24px_location.svg" alt="Location" />
+                        </div>
+                        <div class="step-text inactive">
+                            <span class="step-number">Step 1</span>
+                            <span class="step-title">Address</span>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-step">
+                        <div class="step-icon active">
+                            <img src="../assets/images/img_icon_24px_shipping.svg" alt="Shipping" />
+                        </div>
+                        <div class="step-text active">
+                            <span class="step-number">Step 2</span>
+                            <span class="step-title">Shipping</span>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-step">
+                        <div class="step-icon inactive">
+                            <img src="../assets/images/img_icon_24px_payment.svg" alt="Payment" />
+                        </div>
+                        <div class="step-text inactive">
+                            <span class="step-number">Step 3</span>
+                            <span class="step-title">Payment</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="shipping-section">
+                <div class="shipping-container">
+                    <div class="shipping-content">
+                        <div class="shipping-methods">
+                            <h2 class="section-title">Shipment Method</h2>
+                            
+                            <div class="methods-list">
+                                <div class="method-option" onclick="selectMethod(0)">
+                                    <div class="method-left">
+                                        <div class="method-radio">
+                                            <div class="radio-button selected" id="radio-0"></div>
+                                            <span class="method-price">Free</span>
+                                        </div>
+                                        <span class="method-description">Regulary shipment</span>
+                                    </div>
+                                    <span class="method-date">17 Oct, 2025</span>
+                                </div>
+                                
+                                <div class="method-option" onclick="selectMethod(1)">
+                                    <div class="method-left">
+                                        <div class="method-radio">
+                                            <div class="radio-button" id="radio-1"></div>
+                                            <span class="method-price inactive">$8.50</span>
+                                        </div>
+                                        <span class="method-description inactive">Get your delivery as soon as possible</span>
+                                    </div>
+                                    <span class="method-date inactive">1 Oct, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="navigation-buttons">
+                            <a href="Address.html" class="btn btn-secondary">Back</a>
+                            <a href="Payment.html" class="btn btn-primary">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="../assets/images/img_footer_logo.svg" alt="Cyber Logo" class="footer-logo" />
+                        <div class="social-links">
+                            <img src="../assets/images/img_twitter.svg" alt="Twitter" class="social-icon" />
+                            <img src="../assets/images/img_icon_16px_facebook.svg" alt="Facebook" class="social-icon" />
+                            <img src="../assets/images/img_icon_16px_tiktok.svg" alt="TikTok" class="social-icon" />
+                            <img src="../assets/images/img_icon_16px_instagram.svg" alt="Instagram" class="social-icon" />
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h3 class="footer-title">Services</h3>
+                            <div class="footer-list">
+                                <a href="#" class="footer-link">Bonus program</a>
+                                <a href="#" class="footer-link">Gift cards</a>
+                                <a href="#" class="footer-link">Credit and payment</a>
+                                <a href="#" class="footer-link">Service contracts</a>
+                                <a href="#" class="footer-link">Non-cash account</a>
+                                <a href="#" class="footer-link">Payment</a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h3 class="footer-title">Assistance to the buyer</h3>
+                            <div class="footer-list">
+                                <a href="#" class="footer-link">Find an order</a>
+                                <a href="#" class="footer-link">Terms of delivery</a>
+                                <a href="#" class="footer-link">Exchange and return of goods</a>
+                                <a href="#" class="footer-link">Guarantee</a>
+                                <a href="#" class="footer-link">Frequently asked questions</a>
+                                <a href="#" class="footer-link">Terms of use of the site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        function selectMethod(index) {
+            // Remove selected class from all radio buttons
+            document.querySelectorAll('.radio-button').forEach(radio => {
+                radio.classList.remove('selected');
+            });
+            
+            // Remove active styling from all options
+            document.querySelectorAll('.method-price, .method-description, .method-date').forEach(element => {
+                element.classList.add('inactive');
+            });
+            
+            // Add selected class to clicked radio button
+            document.getElementById(`radio-${index}`).classList.add('selected');
+            
+            // Add active styling to selected option
+            const selectedOption = document.querySelectorAll('.method-option')[index];
+            selectedOption.querySelectorAll('.method-price, .method-description, .method-date').forEach(element => {
+                element.classList.remove('inactive');
+            });
+        }
+    </script>
+</body>
+</html>

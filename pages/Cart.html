@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../styles/stylecart.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="Homepage.html">
+                <img src="../assets/images/img_logo_vector.svg" alt="Cyber Logo" class="logo" />
+            </a>
+            
+            <div class="search-container">
+                <img src="../assets/images/img_search.svg" alt="Search" class="search-icon" />
+                <input type="text" class="search-input" placeholder="Search" />
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="Homepage.html" class="nav-item active">Home</a>
+                <a href="Aboutus.html" class="nav-item">About</a>
+                <a href="Contactus.html" class="nav-item">Contact Us</a>
+                <a href="Blog.html" class="nav-item">Blog</a>
+            </nav>
+            
+            <div class="header-icons">
+                <img src="../assets/images/img_icon_32px_favorites.svg" alt="Favorites" class="header-icon" />
+                <a href="Cart.html">
+                    <img src="../assets/images/img_cart1.svg" alt="Cart" class="header-icon" />
+                </a>
+                <a href="auth_page.html">
+                <img src="../assets/images/img_icon_32px_user.svg" alt="User" class="header-icon" />
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Shopping Cart Section -->
+                <section class="cart-section">
+                    <h1 class="page-title">Shopping Cart</h1>
+                    
+                    <div class="cart-items">
+                        <!-- Cart Item 1 -->
+                        <div class="cart-item">
+                            <div class="item-content">
+                                <img src="../assets/images/img_image_56.png" alt="iPhone 14 Pro Max" class="item-image" />
+                                <div class="item-details">
+                                    <div class="item-info">
+                                        <h3 class="item-name">Apple iPhone 14 Pro Max 128Gb Deep Purple</h3>
+                                        <p class="item-id">#25139526913984</p>
+                                    </div>
+                                    <div class="item-controls">
+                                        <div class="quantity-controls">
+                                            <button class="quantity-btn" onclick="decrementQuantity(this)">
+                                                <img src="../assets/images/img_icon_24px_no_edit.svg" alt="Decrease" />
+                                            </button>
+                                            <input type="text" class="quantity-input" value="1" readonly />
+                                            <button class="quantity-btn" onclick="incrementQuantity(this)">
+                                                <img src="../assets/images/img_icon_24px_edit.svg" alt="Increase" />
+                                            </button>
+                                        </div>
+                                        <span class="item-price">$1399</span>
+                                        <button class="remove-btn" onclick="removeItem(this)">
+                                            <img src="../assets/images/img_icon_24px_close.svg" alt="Remove" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Order Summary Section -->
+                <aside class="order-summary">
+                    <h2 class="summary-title">Order Summary</h2>
+                    
+                    <div class="summary-content">
+                        <div class="promo-section">
+                            <div class="input-group">
+                                <label class="input-label">Discount code / Promo code</label>
+                                <input type="text" class="promo-input" placeholder="Code" />
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">Your bonus card number</label>
+                                <div class="card-input-container">
+                                    <input type="text" class="card-input" placeholder="Enter Card Number" />
+                                    <button class="apply-btn">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-calculations">
+                            <div class="summary-row">
+                                <span class="summary-label">Subtotal</span>
+                                <span class="summary-value" id="subtotal">$0</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span class="summary-label secondary">Estimated Tax</span>
+                                <span class="summary-value">$50</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span class="summary-label secondary">Estimated shipping & Handling</span>
+                                <span class="summary-value">$29</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span class="summary-label">Total</span>
+                                <span class="summary-value" id="total">$2426</span>
+                            </div>
+                        </div>
+                        
+                       <button class="checkout-btn" onclick="checkout()">Checkout</button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="../assets/images/img_footer_logo.svg" alt="Cyber Logo" class="footer-logo" />
+                        <div class="social-links">
+                            <img src="../assets/images/img_twitter.svg" alt="Twitter" class="social-icon" />
+                            <img src="../assets/images/img_icon_16px_facebook.svg" alt="Facebook" class="social-icon" />
+                            <img src="../assets/images/img_icon_16px_tiktok.svg" alt="TikTok" class="social-icon" />
+                            <img src="../assets/images/img_icon_16px_instagram.svg" alt="Instagram" class="social-icon" />
+                        </div>
+                    </div>
+                    
+                    <div class="footer-sections">
+                        <div class="footer-section">
+                            <h3 class="footer-section-title">Services</h3>
+                            <div class="footer-links">
+                                <a href="#" class="footer-link">Bonus program</a>
+                                <a href="#" class="footer-link">Gift cards</a>
+                                <a href="#" class="footer-link">Credit and payment</a>
+                                <a href="#" class="footer-link">Service contracts</a>
+                                <a href="#" class="footer-link">Non-cash account</a>
+                                <a href="#" class="footer-link">Payment</a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h3 class="footer-section-title">Assistance to the buyer</h3>
+                            <div class="footer-links">
+                                <a href="#" class="footer-link">Find an order</a>
+                                <a href="#" class="footer-link">Terms of delivery</a>
+                                <a href="#" class="footer-link">Exchange and return of goods</a>
+                                <a href="#" class="footer-link">Guarantee</a>
+                                <a href="#" class="footer-link">Frequently asked questions</a>
+                                <a href="#" class="footer-link">Terms of use of the site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function checkout() {
+        window.location.href = "Address.html";
+    }
+        function incrementQuantity(button) {
+            const input = button.parentElement.querySelector('.quantity-input');
+            let value = parseInt(input.value);
+            input.value = value + 1;
+            updateTotals();
+        }
+        
+        function decrementQuantity(button) {
+            const input = button.parentElement.querySelector('.quantity-input');
+            let value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
+                updateTotals();
+            }
+        }
+        
+        function removeItem(button) {
+            const cartItem = button.closest('.cart-item');
+            cartItem.style.opacity = '0';
+            cartItem.style.transform = 'translateX(-100%)';
+            cartItem.style.transition = 'all 0.3s ease';
+            
+            setTimeout(() => {
+                cartItem.remove();
+                updateTotals();
+            }, 300);
+        }
+        
+        function updateTotals() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            let subtotal = 0;
+            
+            cartItems.forEach(item => {
+                const quantity = parseInt(item.querySelector('.quantity-input').value);
+                const priceText = item.querySelector('.item-price').textContent;
+                const price = parseInt(priceText.replace('$', '').replace(' ', ''));
+                subtotal += quantity * price;
+            });
+            
+            const tax = 50;
+            const shipping = 29;
+            const total = subtotal + tax + shipping;
+            
+            document.getElementById('subtotal').textContent = '$' + subtotal;
+            document.getElementById('total').textContent = '$' + total;
+        }
+        document.querySelector('.apply-btn').addEventListener('click', function() {
+            const cardInput = document.querySelector('.card-input');
+            if (cardInput.value.trim()) {
+                alert('Bonus card applied successfully!');
+                cardInput.style.borderColor = '#22c55e';
+            } else {
+                alert('Please enter a valid card number.');
+                cardInput.style.borderColor = '#ef4444';
+            }
+        });
+    </script>
+</body>
+</html>
