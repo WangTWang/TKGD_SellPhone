@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
+    <title>Shopping Cart - Cyber</title>
     <link rel="stylesheet" href="../styles/stylecart.css">
 </head>
 <body>
@@ -27,7 +27,6 @@
             </nav>
             
             <div class="header-icons">
-                <img src="../assets/images/img_icon_32px_favorites.svg" alt="Favorites" class="header-icon" />
                 <a href="Cart.html">
                     <img src="../assets/images/img_cart1.svg" alt="Cart" class="header-icon" />
                 </a>
@@ -46,34 +45,11 @@
                 <section class="cart-section">
                     <h1 class="page-title">Shopping Cart</h1>
                     
+
+                    <div class="cart-items cart-item-container">
+                    </div>
                     <div class="cart-items">
-                        <!-- Cart Item 1 -->
-                        <div class="cart-item">
-                            <div class="item-content">
-                                <img src="../assets/images/img_image_56.png" alt="iPhone 14 Pro Max" class="item-image" />
-                                <div class="item-details">
-                                    <div class="item-info">
-                                        <h3 class="item-name">Apple iPhone 14 Pro Max 128Gb Deep Purple</h3>
-                                        <p class="item-id">#25139526913984</p>
-                                    </div>
-                                    <div class="item-controls">
-                                        <div class="quantity-controls">
-                                            <button class="quantity-btn" onclick="decrementQuantity(this)">
-                                                <img src="../assets/images/img_icon_24px_no_edit.svg" alt="Decrease" />
-                                            </button>
-                                            <input type="text" class="quantity-input" value="1" readonly />
-                                            <button class="quantity-btn" onclick="incrementQuantity(this)">
-                                                <img src="../assets/images/img_icon_24px_edit.svg" alt="Increase" />
-                                            </button>
-                                        </div>
-                                        <span class="item-price">$1399</span>
-                                        <button class="remove-btn" onclick="removeItem(this)">
-                                            <img src="../assets/images/img_icon_24px_close.svg" alt="Remove" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </section>
                 
@@ -127,110 +103,108 @@
     </main>
     
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-brand">
-                        <img src="../assets/images/img_footer_logo.svg" alt="Cyber Logo" class="footer-logo" />
-                        <div class="social-links">
-                            <img src="../assets/images/img_twitter.svg" alt="Twitter" class="social-icon" />
-                            <img src="../assets/images/img_icon_16px_facebook.svg" alt="Facebook" class="social-icon" />
-                            <img src="../assets/images/img_icon_16px_tiktok.svg" alt="TikTok" class="social-icon" />
-                            <img src="../assets/images/img_icon_16px_instagram.svg" alt="Instagram" class="social-icon" />
-                        </div>
-                    </div>
-                    
-                    <div class="footer-sections">
-                        <div class="footer-section">
-                            <h3 class="footer-section-title">Services</h3>
-                            <div class="footer-links">
-                                <a href="#" class="footer-link">Bonus program</a>
-                                <a href="#" class="footer-link">Gift cards</a>
-                                <a href="#" class="footer-link">Credit and payment</a>
-                                <a href="#" class="footer-link">Service contracts</a>
-                                <a href="#" class="footer-link">Non-cash account</a>
-                                <a href="#" class="footer-link">Payment</a>
-                            </div>
-                        </div>
-                        
-                        <div class="footer-section">
-                            <h3 class="footer-section-title">Assistance to the buyer</h3>
-                            <div class="footer-links">
-                                <a href="#" class="footer-link">Find an order</a>
-                                <a href="#" class="footer-link">Terms of delivery</a>
-                                <a href="#" class="footer-link">Exchange and return of goods</a>
-                                <a href="#" class="footer-link">Guarantee</a>
-                                <a href="#" class="footer-link">Frequently asked questions</a>
-                                <a href="#" class="footer-link">Terms of use of the site</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <a href="Homepage.html" class="footer-link"> 
+            <img src="../assets/images/img_logo_vector_white_a700.svg" alt="Cyber Logo" class="footer-logo" />
+          </a>
         </div>
-    </footer>
+      </div>
+  </footer>
     
     <script>
-        function checkout() {
-        window.location.href = "Address.html";
-    }
-        function incrementQuantity(button) {
-            const input = button.parentElement.querySelector('.quantity-input');
-            let value = parseInt(input.value);
-            input.value = value + 1;
-            updateTotals();
-        }
-        
-        function decrementQuantity(button) {
-            const input = button.parentElement.querySelector('.quantity-input');
-            let value = parseInt(input.value);
-            if (value > 1) {
-                input.value = value - 1;
-                updateTotals();
-            }
-        }
-        
-        function removeItem(button) {
-            const cartItem = button.closest('.cart-item');
-            cartItem.style.opacity = '0';
-            cartItem.style.transform = 'translateX(-100%)';
-            cartItem.style.transition = 'all 0.3s ease';
-            
-            setTimeout(() => {
-                cartItem.remove();
-                updateTotals();
-            }, 300);
-        }
-        
-        function updateTotals() {
-            const cartItems = document.querySelectorAll('.cart-item');
-            let subtotal = 0;
-            
-            cartItems.forEach(item => {
-                const quantity = parseInt(item.querySelector('.quantity-input').value);
-                const priceText = item.querySelector('.item-price').textContent;
-                const price = parseInt(priceText.replace('$', '').replace(' ', ''));
-                subtotal += quantity * price;
-            });
-            
-            const tax = 50;
-            const shipping = 29;
-            const total = subtotal + tax + shipping;
-            
-            document.getElementById('subtotal').textContent = '$' + subtotal;
-            document.getElementById('total').textContent = '$' + total;
-        }
-        document.querySelector('.apply-btn').addEventListener('click', function() {
-            const cardInput = document.querySelector('.card-input');
-            if (cardInput.value.trim()) {
-                alert('Bonus card applied successfully!');
-                cardInput.style.borderColor = '#22c55e';
-            } else {
-                alert('Please enter a valid card number.');
-                cardInput.style.borderColor = '#ef4444';
-            }
-        });
+        function loadCartItems() {
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  const container = document.querySelector(".cart-item-container");
+  container.innerHTML = "";
+
+  let subtotal = 0;
+
+  cartItems.forEach((item, index) => {
+    const itemPrice = parseFloat(item.price);
+    const itemTotal = item.quantity * itemPrice;
+    subtotal += itemTotal;
+
+    const itemDiv = document.createElement("div");
+    itemDiv.className = "cart-item";
+    itemDiv.innerHTML = `
+      <div class="item-content">
+        <img src="${item.image}" alt="${item.name}" class="item-image" />
+        <div class="item-details">
+          <div class="item-info">
+            <h3 class="item-name">${item.name}</h3>
+            <p class="item-id">#${item.id}</p>
+          </div>
+          <div class="item-controls">
+            <div class="quantity-controls">
+              <button class="quantity-btn" onclick="decrementQuantity(${index})">
+                <img src="../assets/images/img_icon_24px_no_edit.svg" alt="Decrease" />
+              </button>
+              <input type="text" class="quantity-input" value="${item.quantity}" readonly />
+              <button class="quantity-btn" onclick="incrementQuantity(${index})">
+                <img src="../assets/images/img_icon_24px_edit.svg" alt="Increase" />
+              </button>
+            </div>
+            <span class="item-price">$${itemPrice}</span>
+            <button class="remove-btn" onclick="removeItem(${index})">
+              <img src="../assets/images/img_icon_24px_close.svg" alt="Remove" />
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+    container.appendChild(itemDiv);
+  });
+
+  const tax = 50;
+  const shipping = 29;
+  const total = subtotal + tax + shipping;
+
+  document.getElementById("subtotal").textContent = `$${subtotal}`;
+  document.getElementById("total").textContent = `$${total}`;
+}
+
+function incrementQuantity(index) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart[index].quantity++;
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCartItems();
+}
+
+function decrementQuantity(index) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  if (cart[index].quantity > 1) {
+    cart[index].quantity--;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCartItems();
+  }
+}
+
+function removeItem(index) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCartItems();
+}
+
+function checkout() {
+  window.location.href = "Address.html";
+}
+
+document.querySelector('.apply-btn').addEventListener('click', function () {
+  const cardInput = document.querySelector('.card-input');
+  if (cardInput.value.trim()) {
+    alert('Bonus card applied successfully!');
+    cardInput.style.borderColor = '#22c55e';
+  } else {
+    alert('Please enter a valid card number.');
+    cardInput.style.borderColor = '#ef4444';
+  }
+});
+
+window.onload = loadCartItems;
     </script>
 </body>
 </html>
