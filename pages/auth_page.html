@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login / Register</title>
+  <title>Login / Register - Cyber</title>
   <link rel="stylesheet" href="../styles/styleindex.css" />
   <style>
     .auth-container {
@@ -58,40 +58,39 @@
 </head>
 <body>
   <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <a href="Homepage.html">
-                <img src="../assets/images/img_logo_vector.svg" alt="Cyber Logo" class="logo" />
-            </a>
-            
-            <div class="search-container">
-                <img src="../assets/images/img_search.svg" alt="Search" class="search-icon" />
-                <input type="text" class="search-input" placeholder="Search" />
-            </div>
-            
-            <nav class="nav-menu">
-                <a href="Homepage.html" class="nav-item active">Home</a>
-                <a href="Aboutus.html" class="nav-item">About</a>
-                <a href="Contactus.html" class="nav-item">Contact Us</a>
-                <a href="Blog.html" class="nav-item">Blog</a>
-            </nav>
-            
-            <div class="header-icons">
-                <img src="../assets/images/img_icon_32px_favorites.svg" alt="Favorites" class="header-icon" />
-                <a href="Cart.html">
-                    <img src="../assets/images/img_cart1.svg" alt="Cart" class="header-icon" />
-                </a>
-                <a href="auth_page.html">
-                <img src="../assets/images/img_icon_32px_user.svg" alt="User" class="header-icon" />
-                </a>
-            </div>
-        </div>
-    </header>
+  <header class="header">
+    <div class="header-content">
+      <a href="Homepage.html">
+        <img src="../assets/images/img_logo_vector.svg" alt="Cyber Logo" class="logo" />
+      </a>
+
+      <div class="search-container">
+        <img src="../assets/images/img_search.svg" alt="Search" class="search-icon" />
+        <input type="text" class="search-input" placeholder="Search" />
+      </div>
+
+      <nav class="nav-menu">
+        <a href="Homepage.html" class="nav-item active">Home</a>
+        <a href="Aboutus.html" class="nav-item">About</a>
+        <a href="Contactus.html" class="nav-item">Contact Us</a>
+        <a href="Blog.html" class="nav-item">Blog</a>
+      </nav>
+
+      <div class="header-icons">
+        <a href="Cart.html">
+          <img src="../assets/images/img_cart1.svg" alt="Cart" class="header-icon" />
+        </a>
+        <a href="auth_page.html">
+          <img src="../assets/images/img_icon_32px_user.svg" alt="User" class="header-icon" />
+        </a>
+      </div>
+    </div>
+  </header>
 
   <main>
     <div class="auth-container">
-      <h2 class="auth-title">Login</h2>
-      <form class="auth-form">
+      <form id="login-form" class="auth-form">
+        <h2 class="auth-title">Login</h2>
         <input type="email" placeholder="Email" class="auth-input" required />
         <input type="password" placeholder="Password" class="auth-input" required />
         <button type="submit" class="auth-button">Login</button>
@@ -101,7 +100,7 @@
         </p>
       </form>
 
-      <form class="auth-form" style="display:none" id="register-form">
+      <form id="register-form" class="auth-form" style="display:none">
         <h2 class="auth-title">Register</h2>
         <input type="text" placeholder="Full Name" class="auth-input" required />
         <input type="email" placeholder="Email" class="auth-input" required />
@@ -112,7 +111,7 @@
         </p>
       </form>
 
-      <form class="auth-form" style="display:none" id="forgot-form">
+      <form id="forgot-form" class="auth-form" style="display:none">
         <h2 class="auth-title">Forgot Password</h2>
         <input type="email" placeholder="Enter your email" class="auth-input" required />
         <button type="submit" class="auth-button">Reset Password</button>
@@ -122,61 +121,31 @@
       </form>
     </div>
   </main>
-<!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <div class="footer-brand">
-                    <img src="../assets/images/img_logo_vector_white_a700.svg" alt="Cyber Logo" class="footer-logo" />
-                </div>
-                
-                <div class="footer-social">
-                    <img src="../assets/images/img_twitter.svg" alt="Twitter" class="social-icon" />
-                    <img src="../assets/images/img_icon_16px_facebook.svg" alt="Facebook" class="social-icon" />
-                    <img src="../assets/images/img_icon_16px_tiktok.svg" alt="TikTok" class="social-icon" />
-                    <img src="../assets/images/img_icon_16px_instagram.svg" alt="Instagram" class="social-icon" />
-                </div>
-            </div>
-            
-            <div class="footer-right">
-                <div class="footer-column">
-                    <h3 class="footer-column-title">Services</h3>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Bonus program</a>
-                        <a href="#" class="footer-link">Gift cards</a>
-                        <a href="#" class="footer-link">Credit and payment</a>
-                        <a href="#" class="footer-link">Service contracts</a>
-                        <a href="#" class="footer-link">Non-cash account</a>
-                        <a href="#" class="footer-link">Payment</a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-column-title">Assistance to the buyer</h3>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Find an order</a>
-                        <a href="#" class="footer-link">Terms of delivery</a>
-                        <a href="#" class="footer-link">Exchange and return of goods</a>
-                        <a href="#" class="footer-link">Guarantee</a>
-                        <a href="#" class="footer-link">Frequently asked questions</a>
-                        <a href="#" class="footer-link">Terms of use of the site</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-  <script>
-  function toggleForm(type) {
-    document.querySelector('.auth-form').style.display = type === 'login' ? 'flex' : 'none';
-    document.getElementById('register-form').style.display = type === 'register' ? 'flex' : 'none';
-    document.getElementById('forgot-form').style.display = type === 'forgot' ? 'flex' : 'none';
-  }
 
-  // Auto redirect to Homepage after login
-  document.querySelector('form.auth-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // chặn gửi form
-    window.location.href = 'Homepage.html'; // chuyển hướng
-  });
-</script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <a href="Homepage.html" class="footer-link"> 
+            <img src="../assets/images/img_logo_vector_white_a700.svg" alt="Cyber Logo" class="footer-logo" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleForm(type) {
+      document.getElementById('login-form').style.display = (type === 'login') ? 'flex' : 'none';
+      document.getElementById('register-form').style.display = (type === 'register') ? 'flex' : 'none';
+      document.getElementById('forgot-form').style.display = (type === 'forgot') ? 'flex' : 'none';
+    }
+
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = 'Homepage.html';
+    });
+  </script>
 </body>
 </html>
