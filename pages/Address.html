@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Address Selection</title>
+    <title>Address Selection - Cyber</title>
     <link rel="stylesheet" href="../styles/styleaddress.css">
 </head>
 <body>
@@ -28,7 +28,6 @@
             </nav>
             
             <div class="header-icons">
-                <img src="../assets/images/img_icon_32px_favorites.svg" alt="Favorites" class="header-icon" />
                 <a href="Cart.html">
                     <img src="../assets/images/img_cart1.svg" alt="Cart" class="header-icon" />
                 </a>
@@ -75,89 +74,42 @@
             </div>
             
             <!-- Address Selection -->
-            <div class="address-section">
-                <h2 class="section-title">Select Address</h2>
-                
-                <div class="address-list">
-                    <!-- Address 1 -->
-                    <div class="address-card">
-                        <div class="address-header">
-                            <div class="address-title-row">
-                                <img src="../assets/images/img_redio.svg" alt="Selected" class="radio-button" />
-                                <span class="address-name">...</span>
-                                <span class="address-tag">HOME</span>
-                            </div>
-                            <div class="address-actions">
-                                <img src="../assets/images/img_icon_24px_to_edit.svg" alt="Edit" class="action-icon" />
-                                <img src="../assets/images/img_icon_24px_close.svg" alt="Delete" class="action-icon" />
-                            </div>
-                        </div>
-                        <div class="address-details">
-                            <p class="address-text">123 AbC, XYZ city</p>
-                        </div>
-                        <div class="address-phone">
-                            <p class="address-text">+84: ...</p>
-                        </div>
-                    </div>
-                
-                <!-- Add New Address -->
-                <div class="add-address">
-                    <div class="divider-row">
-                        <div class="divider-line"></div>
-                        <img src="../assets/images/img_subtract.svg" alt="Add" class="add-icon" />
-                        <div class="divider-line"></div>
-                    </div>
-                    <span class="add-text">Add New Address</span>
-                </div>
-                
-                <!-- Navigation Buttons -->
-                <div class="nav-buttons">
-                    <a href="Cart.html" class="btn btn-secondary">Back</a>
-                    <a href="Payment.html" class="btn btn-primary">Next</a>
-                </div>
-            </div>
+<div class="address-section">
+  <h2 class="section-title">Select Address</h2>
+
+  <div class="address-list" id="addressList">
+    <!-- Danh sách địa chỉ sẽ được thêm ở đây bằng JS -->
+  </div>
+
+  <!-- Add New Address -->
+  <div class="add-address" onclick="addAddress()">
+    <div class="divider-row">
+      <div class="divider-line"></div>
+      <img src="../assets/images/img_subtract.svg" alt="Add" class="add-icon" />
+      <div class="divider-line"></div>
+    </div>
+    <span class="add-text">Add New Address</span>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <a href="Cart.html" class="btn btn-secondary">Back</a>
+    <a href="Shipping.html" class="btn btn-primary">Next</a>
+  </div>
+</div>
         </main>
         
         <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="../assets/images/img_footer_logo.svg" alt="Cyber Logo" class="footer-logo" />
-                    <div class="social-icons">
-                        <img src="../assets/images/img_twitter.svg" alt="Twitter" class="social-icon" />
-                        <img src="../assets/images/img_icon_16px_facebook.svg" alt="Facebook" class="social-icon" />
-                        <img src="../assets/images/img_icon_16px_tiktok.svg" alt="TikTok" class="social-icon" />
-                        <img src="../assets/images/img_icon_16px_instagram.svg" alt="Instagram" class="social-icon" />
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3 class="footer-title">Services</h3>
-                        <div class="footer-link-list">
-                            <a href="#" class="footer-link">Bonus program</a>
-                            <a href="#" class="footer-link">Gift cards</a>
-                            <a href="#" class="footer-link">Credit and payment</a>
-                            <a href="#" class="footer-link">Service contracts</a>
-                            <a href="#" class="footer-link">Non-cash account</a>
-                            <a href="#" class="footer-link">Payment</a>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title">Assistance to the buyer</h3>
-                        <div class="footer-link-list">
-                            <a href="#" class="footer-link">Find an order</a>
-                            <a href="#" class="footer-link">Terms of delivery</a>
-                            <a href="#" class="footer-link">Exchange and return of goods</a>
-                            <a href="#" class="footer-link">Guarantee</a>
-                            <a href="#" class="footer-link">Frequently asked questions</a>
-                            <a href="#" class="footer-link">Terms of use of the site</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <a href="Homepage.html" class="footer-link"> 
+            <img src="../assets/images/img_logo_vector_white_a700.svg" alt="Cyber Logo" class="footer-logo" />
+          </a>
+        </div>
+      </div>
+  </footer>
     </div>
     
     <script>
@@ -202,6 +154,56 @@
                 });
             });
         });
+
+        let addressCounter = 0;
+
+  function addAddress(name = "New Name", address = "123 Street", phone = "+84...") {
+    const container = document.getElementById("addressList");
+
+    const id = "addr-" + addressCounter++;
+    const card = document.createElement("div");
+    card.className = "address-card";
+    card.id = id;
+    card.innerHTML = `
+      <div class="address-header">
+        <div class="address-title-row">
+          <input type="radio" name="selectedAddress" class="radio-button" />
+          <span class="address-name" contenteditable="true">${name}</span>
+          <span class="address-tag">HOME</span>
+        </div>
+        <div class="address-actions">
+          <img src="../assets/images/img_icon_24px_to_edit.svg" alt="Edit" class="action-icon" onclick="editAddress('${id}')" />
+          <img src="../assets/images/img_icon_24px_close.svg" alt="Delete" class="action-icon" onclick="deleteAddress('${id}')" />
+        </div>
+      </div>
+      <div class="address-details">
+        <p class="address-text" contenteditable="true">${address}</p>
+      </div>
+      <div class="address-phone">
+        <p class="address-text" contenteditable="true">${phone}</p>
+      </div>
+    `;
+
+    container.appendChild(card);
+  }
+
+  function deleteAddress(id) {
+    const card = document.getElementById(id);
+    if (card) card.remove();
+  }
+
+  function editAddress(id) {
+    const card = document.getElementById(id);
+    if (card) {
+      // Nếu cần logic bật contenteditable từ false -> true thì có thể thêm ở đây.
+      alert("You can directly edit the fields now.");
+    }
+  }
+
+  // Khởi tạo một địa chỉ mặc định lúc đầu
+  window.onload = () => {
+    addAddress("John Doe", "123 AbC, XYZ city", "+84 123456789");
+  };
     </script>
 </body>
 </html>
