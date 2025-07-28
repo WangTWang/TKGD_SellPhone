@@ -27,7 +27,6 @@
             </nav>
             
             <div class="header-icons">
-                <img src="../assets/images/img_icon_32px_favorites.svg" alt="Favorites" class="header-icon" />
                 <a href="../pages/Cart.html">
                     <img src="../assets/images/img_cart1.svg" alt="Cart" class="header-icon" />
                 </a>
@@ -131,7 +130,6 @@
             </div>
             
             <div class="action-buttons">
-                <button class="btn-wishlist">Add to Wishlist</button>
                 <button class="btn-cart">Add to Cart</button>
             </div>
             
@@ -343,10 +341,6 @@
             </div>
         </div>
         
-        <button class="view-more-btn">
-            View More
-            <img src="../assets/images/img_expanddownlight.svg" alt="Expand" width="24" height="24" />
-        </button>
     </section>
     
 <!-- Related Products -->
@@ -358,9 +352,6 @@
 
             <!-- Product 1 -->
             <div class="product-card" onclick="location.href='iPhone15Plus.html?id=iphone14pro512gold'">
-                <div class="product-card-header">
-                    <img src="../assets/images/img_favorite_duotone.svg" alt="Favorite" class="favorite-icon" />
-                </div>
                 <div class="image-container">
                     <img src="../assets/images/iphone15+gold.png" alt="iPhone 14 Pro" class="product-image" />
                     <div class="overlay">More Details</div>
@@ -376,9 +367,6 @@
 
             <!-- Product 2 -->
             <div class="product-card" onclick="location.href='iPhone14Plus.html?id=iphone14plus128black'">
-                <div class="product-card-header">
-                    <img src="../assets/images/img_favorite_duotone.svg" alt="Favorite" class="favorite-icon" />
-                </div>
                 <div class="image-container">
                     <img src="../assets/images/iphone14+black.png" alt="iPhone 14 Plus" class="product-image" />
                     <div class="overlay">More Details</div>
@@ -394,9 +382,6 @@
 
             <!-- Product 3 -->
             <div class="product-card" onclick="location.href='iPhone14ProMax.html?id=iphone14promax128purple'">
-                <div class="product-card-header">
-                    <img src="../assets/images/img_favorite_duotone.svg" alt="Favorite" class="favorite-icon" />
-                </div>
                 <div class="image-container">
                     <img src="../assets/images/14promaxpurple.png" alt="iPhone 14 Pro Max" class="product-image" />
                     <div class="overlay">More Details</div>
@@ -412,9 +397,6 @@
 
             <!-- Product 4 -->
             <div class="product-card" onclick="location.href='iPhone14Pro.html?id=iphone14pro1tbsilver'">
-                <div class="product-card-header">
-                    <img src="../assets/images/img_favorite_duotone.svg" alt="Favorite" class="favorite-icon" />
-                </div>
                 <div class="image-container">
                     <img src="../assets/images/iphone14prosilver.png" alt="iPhone 14 Pro 1TB Silver" class="product-image" />
                     <div class="overlay">More Details</div>
@@ -433,120 +415,88 @@
 </section>
     
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <div class="footer-brand">
-                    <img src="../assets/images/img_logo_vector_white_a700.svg" alt="Cyber Logo" class="footer-logo" />
-                </div>
-                
-                <div class="footer-social">
-                    <img src="../assets/images/img_twitter.svg" alt="Twitter" class="social-icon" />
-                    <img src="../assets/images/img_icon_16px_facebook.svg" alt="Facebook" class="social-icon" />
-                    <img src="../assets/images/img_icon_16px_tiktok.svg" alt="TikTok" class="social-icon" />
-                    <img src="../assets/images/img_icon_16px_instagram.svg" alt="Instagram" class="social-icon" />
-                </div>
-            </div>
-            
-            <div class="footer-right">
-                <div class="footer-column">
-                    <h3 class="footer-column-title">Services</h3>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Bonus program</a>
-                        <a href="#" class="footer-link">Gift cards</a>
-                        <a href="#" class="footer-link">Credit and payment</a>
-                        <a href="#" class="footer-link">Service contracts</a>
-                        <a href="#" class="footer-link">Non-cash account</a>
-                        <a href="#" class="footer-link">Payment</a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="footer-column-title">Assistance to the buyer</h3>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Find an order</a>
-                        <a href="#" class="footer-link">Terms of delivery</a>
-                        <a href="#" class="footer-link">Exchange and return of goods</a>
-                        <a href="#" class="footer-link">Guarantee</a>
-                        <a href="#" class="footer-link">Frequently asked questions</a>
-                        <a href="#" class="footer-link">Terms of use of the site</a>
-                    </div>
-                </div>
-            </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <a href="../pages/Homepage.html" class="footer-link"> 
+            <img src="../assets/images/img_logo_vector_white_a700.svg" alt="Cyber Logo" class="footer-logo" />
+          </a>
         </div>
-    </footer>
+      </div>
+  </footer>
     
-    <script>
-        document.querySelectorAll('.color-option').forEach(option => {
-    option.addEventListener('click', function () {
-        document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
-        this.classList.add('selected');
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const imageMap = {
+        black: '../assets/images/iphone15promaxblack.png',
+        blue: '../assets/images/iphone15promaxblue.png',
+        titan: '../assets/images/iphone15promaxtitan.png',
+        silver: '../assets/images/iphone15promaxsilver.png',
+    };
 
-        const selectedColor = this.getAttribute('data-color');
+    const storagePrices = {
+        "256GB": 1199,
+        "512GB": 1399,
+        "1TB": 1599,
+    };
 
-        const imageMap = {
-            black: '../assets/images/iphone15promaxblack.png',
-            blue: '../assets/images/iphone15promaxblue.png',
-            titan: '../assets/images/iphone15promaxtitan.png',
-            silver: '../assets/images/iphone15promaxsilver.png',
-        };
-
-        const mainImage = document.querySelector('.main-image');
-        mainImage.src = imageMap[selectedColor];  // selectedColor must be "black" or "purple"
-    
-
+    document.querySelectorAll('.color-option').forEach(option => {
+        option.addEventListener('click', function () {
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
+            this.classList.add('selected');
+            const selectedColor = this.getAttribute('data-color');
+            document.querySelector('.main-image').src = imageMap[selectedColor];
         });
     });
-        
-        // Storage selection functionality
-        const storagePrices = {
-    "256GB": 1199,
-    "512GB": 1399,
-    "1TB": 1599,
-};
 
-// Storage selection functionality + update price
-document.querySelectorAll('.storage-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        document.querySelectorAll('.storage-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        const storage = this.textContent.trim();
-        const newPrice = storagePrices[storage];
-        document.querySelector('.current-price').textContent = `$${newPrice}`;
+    document.querySelectorAll('.storage-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('.storage-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const storage = this.textContent.trim();
+            const newPrice = storagePrices[storage];
+            document.querySelector('.current-price').textContent = `$${newPrice}`;
+        });
     });
+
+    document.querySelector('.btn-cart').addEventListener('click', function () {
+        const selectedColor = document.querySelector('.color-option.selected')?.getAttribute("data-color");
+        const selectedStorage = document.querySelector('.storage-btn.active')?.textContent.trim();
+        const name = "Apple iPhone 15 Pro Max";
+
+        if (!selectedColor || !selectedStorage) {
+            alert("Please select both color and storage.");
+            return;
+        }
+
+        const price = storagePrices[selectedStorage];
+        const image = imageMap[selectedColor];
+        const id = `iphone15promax_${selectedStorage}_${selectedColor}`;
+
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existingIndex = cart.findIndex(item => item.id === id);
+
+        if (existingIndex !== -1) {
+            cart[existingIndex].quantity += 1;
+        } else {
+            cart.push({
+                name: `${name} ${selectedStorage} ${capitalize(selectedColor)}`,
+                price: price,
+                image: image,
+                id: id,
+                quantity: 1
+            });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Product added to cart!");
+    });
+
+    function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
 });
-        
-        // Thumbnail image switching
-        document.querySelectorAll('.thumbnail').forEach(thumb => {
-            thumb.addEventListener('click', function() {
-                const mainImage = document.querySelector('.main-image');
-                mainImage.src = this.src;
-            });
-        });
-        
-        // Add to cart functionality
-        document.querySelector('.btn-cart').addEventListener('click', function() {
-            alert('Product added to cart!');
-        });
-        
-        // Add to wishlist functionality
-        document.querySelector('.btn-wishlist').addEventListener('click', function() {
-            alert('Product added to wishlist!');
-        });
-        
-        // View more buttons
-        document.querySelectorAll('.view-more-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                alert('Loading more content...');
-            });
-        });
-        
-        // Buy now buttons
-        document.querySelectorAll('.buy-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                alert('Redirecting to checkout...');
-            });
-        });
-    </script>
+</script>
 </body>
 </html>
